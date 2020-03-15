@@ -1,0 +1,15 @@
+{
+  "name": "ffgdices",
+  "version": "1.0.0",
+  "description": "sw ffg dice roller",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thalion",
+  "license": "ISC"
+}
