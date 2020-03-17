@@ -2,13 +2,26 @@ import { RollRequest } from './modules/RollRequest.js';
 import * as Discord from 'discord.js'
 
 const client = new Discord.default.Client();
+var emojis = true;
 
 client.on('ready', () => {
   console.log("Logged in as ${client.user.tag}!");
 });
 
+function loadEmoji(list){
+  emojis = {success:"", failure:"", triumph_:"", despair:"", advantage:"", threat:"",lightside:"",darkside:""}
+
+  list.forEach((code, id) => {
+    if(code['name'] in emojis){
+      emojis[code['name']] = `<:${code['name']}:${id}>`;
+    }
+  });
+  console.log(emojis);
+}
+
 client.on('message', msg => {
   if (msg.content === "!D"){
+
     msg.reply(
       `les dés disponibles sont les suivants :
       :green: dé d'aptitude
@@ -24,10 +37,15 @@ client.on('message', msg => {
       `
     );
   } else if (msg.content.startsWith("!D")){
+
+    if (emojis){
+      loadEmoji(msg.channel.guild.emojis.cache);
+    }
+
     let requestedRoll = new RollRequest(msg.content);
 
     msg.reply(
-      requestedRoll.makeTheRoll().toString()
+      requestedRoll.makeTheRoll().toString(emojis)
     );
   }
 });
