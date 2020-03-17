@@ -12,6 +12,7 @@ function loadEmoji(list){
   emojis = {success:"", failure:"", triumph_:"", despair:"", advantage:"", threat:"",lightside:"",darkside:""}
 
   list.forEach((code, id) => {
+    console.log(code['name']);
     if(code['name'] in emojis){
       emojis[code['name']] = `<:${code['name']}:${id}>`;
     }
@@ -39,6 +40,7 @@ client.on('message', msg => {
   } else if (msg.content.startsWith("!D")){
 
     if (emojis){
+      console.log(msg.channel.guild.emojis.caches);
       loadEmoji(msg.channel.guild.emojis.cache);
     }
 
