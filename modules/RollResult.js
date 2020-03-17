@@ -27,7 +27,7 @@ export class RollResult {
 
   toString(emojis) {
     let result = "\n";
-    if (this.triumphDespair > 0) result += emojis["s_triumph_"].repeat(this.triumphDespair); 
+    if (this.triumphDespair > 0) result += emojis["s_triumph"].repeat(this.triumphDespair); 
     if (this.triumphDespair < 0) result += emojis["s_despair"].repeat(-this.triumphDespair); 
     if (this.successFailure > 0) result += emojis["s_success"].repeat(this.successFailure); 
     if (this.successFailure < 0) result += emojis["s_failure"].repeat(-this.successFailure); 
