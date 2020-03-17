@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 
 function loadEmoji(list){
-  emojis = {s_success:"", s_failure:"", s_triumph_:"", s_despair:"", s_advantage:"", s_threat:"",s_lightside:"",s_darkside:""}
+  emojis = {s_success:"", s_failure:"", s_triumph:"", s_despair:"", s_advantage:"", s_threat:"",s_lightside:"",s_darkside:""}
 
   list.forEach((code, id) => {
     console.log(code['name']);
