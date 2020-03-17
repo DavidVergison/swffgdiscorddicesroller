@@ -27,14 +27,14 @@ export class RollResult {
 
   toString(emojis) {
     let result = "\n";
-    if (this.triumphDespair > 0) result += emojis["triumph_"].repeat(this.triumphDespair); 
-    if (this.triumphDespair < 0) result += emojis["despair"].repeat(-this.triumphDespair); 
-    if (this.successFailure > 0) result += emojis["success"].repeat(this.successFailure); 
-    if (this.successFailure < 0) result += emojis["failure"].repeat(-this.successFailure); 
-    if (this.advantageThreat > 0) result += emojis["advantage"].repeat(this.advantageThreat); 
-    if (this.advantageThreat < 0) result += emojis["threat"].repeat(-this.advantageThreat); 
-    if (this.lightside > 0) result += emojis["lightside"].repeat(this.lightside); 
-    if (this.darkside > 0) result += emojis["darkside"].repeat(this.darkside); 
+    if (this.triumphDespair > 0) result += emojis["s_triumph_"].repeat(this.triumphDespair); 
+    if (this.triumphDespair < 0) result += emojis["s_despair"].repeat(-this.triumphDespair); 
+    if (this.successFailure > 0) result += emojis["s_success"].repeat(this.successFailure); 
+    if (this.successFailure < 0) result += emojis["s_failure"].repeat(-this.successFailure); 
+    if (this.advantageThreat > 0) result += emojis["s_advantage"].repeat(this.advantageThreat); 
+    if (this.advantageThreat < 0) result += emojis["s_threat"].repeat(-this.advantageThreat); 
+    if (this.lightside > 0) result += emojis["s_lightside"].repeat(this.lightside); 
+    if (this.darkside > 0) result += emojis["s_darkside"].repeat(this.darkside); 
 
     if (result === "\n"){
       return "Aucun symbole (ou symboles entre-annulés)";

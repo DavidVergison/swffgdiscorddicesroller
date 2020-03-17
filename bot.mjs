@@ -25,16 +25,16 @@ client.on('message', msg => {
 
     msg.reply(
       `les dés disponibles sont les suivants :
-      :green: dé d'aptitude
-      :yellow: dé de maitrise
-      :blue: dé de fortune
-      :white: dé de force
-      :purple: dé de difficulté
-      :red: dé de défi
-      :black: dé d'infortune
+      :d_green: dé d'aptitude
+      :d_yellow: dé de maitrise
+      :d_blue: dé de fortune
+      :d_white: dé de force
+      :d_purple: dé de difficulté
+      :d_red: dé de défi
+      :d_black: dé d'infortune
 
       exemple :
-      !D:green::green::yellow::blue::purple::purple:
+      !D:d_green::d_green::d_yellow::d_blue::d_purple::d_purple:
       `
     );
   } else if (msg.content.startsWith("!D")){
@@ -52,4 +52,4 @@ client.on('message', msg => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login("Njg4ODMwNDk0NDY0NDA5ODYz.XnBxWg.Q-YNzIAz2i0cNkknrKhIjJhEwbk");

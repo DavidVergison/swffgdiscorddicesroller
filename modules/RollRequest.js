@@ -4,13 +4,13 @@ export class RollRequest {
     dicesResult = "";
     requestString = "";
     dices = {
-        "blue": ["a","aa","as","s","",""],
-        "black": ["t","tt","tf","f","",""],
-        "purple": ["t","t","t","tt","f","ff","","ft"],
-        "green": ["a","a","a","aa","s","ss","","sa"],
-        "yellow": ["","as","as","aa","ss","s","T","ss","s","aa","as","a"],
-        "red": ["","tf","tf","tt","ff","f","D","ff","f","tt","tf","t"],
-        "white": ["d","d","d","d","d","d","l","l","ll","dd","ll","ll"]
+        "d_blue": ["a","aa","as","s","",""],
+        "d_black": ["t","tt","tf","f","",""],
+        "d_purple": ["t","t","t","tt","f","ff","","ft"],
+        "d_green": ["a","a","a","aa","s","ss","","sa"],
+        "d_yellow": ["","as","as","aa","ss","s","T","ss","s","aa","as","a"],
+        "d_red": ["","tf","tf","tt","ff","f","D","ff","f","tt","tf","t"],
+        "d_white": ["d","d","d","d","d","d","l","l","ll","dd","ll","ll"]
       };
 
     constructor(requestString) {
